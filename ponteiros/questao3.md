@@ -28,7 +28,7 @@ Na pŕoxima linha, tem-se que o conteúdo do endereço para o qual o ponteiro p3
     *p3 = **pp;
 ```
 
-Depois, tem-se atribuição (e a criação) do ponteiro p4 que recebe o endereço da váriavel inteira d. E, após isso, tem-se a declaração de o contéudo do endereço de D é mudado para a soma de b (20) com o conteudo do endereço o qual o p1 guarda (10), deixando d com o valor de 30 e, com o ++ aṕos o conteúdo de p1, mudando o conteúdo de p1 para ele mesmo (10) com (1) deixando o conteúdo de p1 igual 11 e, com isso, fazendo com que o valor de a também seja igual a 11, uma vez que o endereço de p1 é o endereço do A. Entretanto, é importante frizar que, apesar de, na linha anterior o contéudo de p3 ser igual ao conteudo do pp, o valor de c continuará a ser igual a 10 e o de a será 11.
+Depois, tem-se atribuição (e a criação) do ponteiro p4 que recebe o endereço da váriavel inteira d. E, após isso, tem-se a declaração de o contéudo do endereço de D é mudado para a soma de b (20) com o conteudo do endereço o qual o p1 guarda (10), deixando d com o valor de 30 e, com o ++ aṕos o conteúdo de p1, mudando o conteúdo de p1 para ele mesmo (10) com (1) deixando o conteúdo de p1 igual 11 e, com isso, fazendo com que o valor de a também seja igual a 11, uma vez que o endereço de p1 é o endereço do A. Entretanto, é importante frizar que, apesar de, na linha anterior o contéudo de p3 ser igual ao conteudo do pp, o valor de c continuará a ser igual a 10 (já que o operador de incremento foi adicionado depois, assim deixando d igual a 30, c igual a 10 e a sendo modificado depois para 11).
 ```
     int *p4 = &d;
     *p4 = b + (*p1)++;
