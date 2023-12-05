@@ -1,9 +1,11 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 int main(void){
 
+    int tamanho = 5, contador;
     // criando um ponteiro que receberá o endereço do primeiro elemento do vetor
-    int *vetor = malloc(3*sizeof(int));
+    int *vetor = malloc(tamanho*sizeof(int));
 
     /*
     para forçar o computador a gerar um edereço de int (ou o tipo que será guardado, utiliza-se um cast)
@@ -32,6 +34,12 @@ int main(void){
     }
     else{
         printf("Alocação bem sucedida");
+    }
+
+    for(contador = 0; contador < tamanho; contador++){
+        printf("\nDigite o valor %d do vetor: ", contador);
+        scanf("%d", vetor+contador); 
+        // ou scanf("%d", &vetor[contador]);
     }
 
     // liberando a memória, uma vez que não será mais utilizado
