@@ -6,6 +6,7 @@ int main(void){
     int tamanho = 5, contador;
     // criando um ponteiro que receberá o endereço do primeiro elemento do vetor
     int *vetor = malloc(tamanho*sizeof(int));
+    int novo_tamanho;
 
 
     /*
