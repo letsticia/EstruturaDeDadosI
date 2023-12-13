@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main(void){
     // váriaveis necessárias para os laços
@@ -58,18 +57,19 @@ int main(void){
                 PorcentagemMasc++;
             }
         }
+        
     }
-    
+
     // calculando as porcentagens femininas
     if (Mulheres != 0){
-        float totalPorcentagemFem = (PorcentagemFem * 100)/Mulheres;
+        totalPorcentagemFem = (PorcentagemFem * 100)/Mulheres;
     }
 
     // calculando as porcentagens masculinas
     if (Homens !=0){
-        float totalPorcentagemMasc = (PorcentagemMasc * 100)/Homens;
+        totalPorcentagemMasc = (PorcentagemMasc * 100)/Homens; 
     }
-    
+  
 
     // imprimindo as informações
     printf("=============== INFORMAÇÕES SOBRE A PESQUISA ===============\n");
