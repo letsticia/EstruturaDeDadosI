@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void){
+    // variáveis necessárias
     int quantidadeQuestoes;
     int alunos = 10;
     float notas[alunos];
