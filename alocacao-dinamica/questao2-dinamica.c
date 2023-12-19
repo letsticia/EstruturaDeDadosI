@@ -49,7 +49,7 @@ void exibeResultados(char *gabarito, float *notas, int alunos, int quantidade, i
 
 int main(void){
     int quantidade = 0;
-    int alunos = 4;
+    int alunos = 10;
     float *notas = (float *) malloc(alunos * sizeof(float));
     int aprovados = 0;
 
