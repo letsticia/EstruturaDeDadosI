@@ -24,7 +24,7 @@ void dados_pessoa(Pessoa * p){
     scanf(" %[^\n]", p->nome); 
     printf("Informe a idade: \t");
     scanf("%d", &p->idade); 
-    printf("Genero: \n\t -> Masculino[1] \n\t ->Feminino[2] \n\t ->Neutro[3] \nOpcao: \t");
+    printf("Informe o Genero: \n\t -> Masculino[1] \n\t ->Feminino[2] \n\t ->Neutro[3] \nOpcao: \t");
     scanf("%d", &escolha);
     
     switch (escolha){
@@ -46,13 +46,18 @@ void dados_pessoa(Pessoa * p){
 
 }
 
-int main(){
-    Pessoa pessoa;
-    dados_pessoa(&pessoa);
+void imprime_dados(Pessoa pessoa){
+
     printf("=====================================\n");
     printf("\t Dados da pessoa\n");
     printf("=====================================\n");
     printf("Nome: %s\n", pessoa.nome);
     printf("Idade: %d\n", pessoa.idade);
     printf("Genero: %s\n", pessoa.genero.masculino);
+}
+
+int main(){
+    Pessoa pessoa;
+    dados_pessoa(&pessoa);
+    imprime_dados(pessoa);
 }

@@ -40,13 +40,19 @@ void dados_produto(Produto * produto){
     }
 }
 
-int main(){
-    Produto produto;
-    dados_produto(&produto);
+void imprime_dados(Produto produto){
+
     printf("=====================================\n");
     printf("\t Dados do produto\n");
     printf("=====================================\n");
     printf("Nome: %s\n", produto.nome);
     printf("Preco: %.2f\n", produto.preco);
     printf("Tipo: %s\n", produto.tipo.eletronico);
+}
+
+int main(){
+    Produto produto;
+    dados_produto(&produto);
+    imprime_dados(produto);
+    return 0;
 }
