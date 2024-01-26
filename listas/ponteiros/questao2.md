@@ -22,33 +22,15 @@ E, assim como mencionado também no primeiro item, o erro da  última linha da f
 
 # Alternativa [C]
 
-A execução não foi bem sucedida, o seguinte erro apareceu:
 
 ```
-teste.c: In function ‘main’:
-teste.c:6:3: warning: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
-    6 | p = x;
-      |   ^
-teste.c:7:8: error: stray ‘\342’ in program
-    7 | printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
-      |        ^
-teste.c:7:9: error: ‘Valor’ undeclared (first use in this function)
-    7 | printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
-      |         ^~~~~
-teste.c:7:9: note: each undeclared identifier is reported only once for each function it appears in
-teste.c:7:14: error: expected ‘)’ before ‘de’
-    7 | printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
-      |       ~      ^~~
-      |              )
-teste.c:7:24: error: stray ‘\’ in program
-    7 | printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
-      |                        ^
-teste.c:7:42: error: stray ‘\342’ in program
-    7 | printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
-      |           
+listas\ponteiros\questao2.c: In function 'main':
+listas\ponteiros\questao2.c:6:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     p = x; // atribuindo o valor de x para p
+       ^      
 ```
 
-Não foram os mesmos erros dos quais eu mencionei nos itens anteriores, mas acredito que sejam derivados.
+Aparece a advertência mencionada e o comando printf não é exibindo, após isso, o programa se encerra. Dessa forma, a execução não foi bem sucedida tendo em vista que o programa não executa o printf.
 
 # Alternativa [D]
 
