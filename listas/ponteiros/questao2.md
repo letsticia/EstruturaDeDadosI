@@ -34,7 +34,7 @@ Aparece a advertência mencionada e o comando printf não é exibindo, após iss
 
 # Alternativa [D]
 
-Para que nenuma mensage seja exibida do compilador, é necessário fazer a seguinte modificação:
+Para que nenuma mensagem seja exibida do compilador, é necessário fazer a seguinte modificação:
 
 ```
 #include <stdio.h>
