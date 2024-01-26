@@ -42,7 +42,7 @@ Para que nenuma mensage seja exibida do compilador, é necessário fazer a segui
 int main(void) {
     int x, *p;
     x = 100;
-    p = &x; #fora adicionado o operador de endereço
+    p = &x; # fora adicionado o operador de endereço
     printf("Valor de p = %p \t Valor de *p = %d", p, *p);
 
     return 0; # não necessário, mas, por boas práticas, é bom adicionar o return para que saia da função main.
