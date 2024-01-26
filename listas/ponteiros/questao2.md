@@ -18,7 +18,7 @@ Apesar disso, ainda é possível que haja uma mensagem de erro na última linha,
 
 Como explicado na alternativa anterior, o compilador inicialmente irá emitir uma advertência porque fora atribuído o valor da varíável x (o valor inteiro, não o endereço) ao ponteiro p. 
 
-E, assim como mencionado também no primeiro item, o erro da  última linha da função main acontece porque o compilador espera um ponteiro para um endereço assim como o conteúdo deste, entretanto, como fora atribuido um valor inteiro, o endereço e o conteúdo não existem. 
+E, assim como mencionado também no primeiro item, o erro da  última linha da função main acontece porque o compilador espera um ponteiro para um endereço assim como o conteúdo deste, entretanto, como fora atribuido um valor inteiro, o endereço e o conteúdo não existem.  Fazendo com que a função printf não seja executada corretamente e, consequentemente, o programa seja encerrado.
 
 # Alternativa [C]
 
