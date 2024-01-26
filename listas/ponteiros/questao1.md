@@ -30,7 +30,7 @@ E, por último, o conteúdo do endereço para qual o ponteiro p aponta (y) é mu
 (*p) += x;
 ```
 
-Dessa forma, o resultado final para os valores de x, y e p são:
+Dessa forma, o resultado final para os valores de x, y e p é:
 
 ```
  x = 3
