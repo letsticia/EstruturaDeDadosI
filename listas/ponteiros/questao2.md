@@ -8,7 +8,7 @@ Tendo em vista que, na primeira linha da função main, fora declarado um pontei
     p = x; #declarando em um ponteiro um valor de inteiro normal
 ```
 
-Apesar disso, ainda é possível que haja uma mensagem de erro na última linha, uma vez que, na função printf, o formatador está esperando dois ponteiros, o primeiro que deveria mostrar o endereço para qual aponta e o segundo que deveria mostrar o o conteúdo deste endereço. Entretanto, é possível que aconteça um erro exatamente nesta linha, uma vez que o programa espera um endereço de memória (que exista) assim como o conteudo deste. Dessa forma, ao tentar acessar o conteúdo de um endereço de memória inexistente, irá gerar um erro.
+Apesar disso, ainda é possível que haja uma mensagem de erro na última linha, uma vez que, na função printf, o formatador está esperando dois ponteiros, o primeiro que deveria mostrar o endereço para qual aponta e o segundo que deveria mostrar o o conteúdo deste endereço. Entretanto, é possível que aconteça um erro exatamente nesta linha, uma vez que o programa espera um endereço de memória (que exista) assim como o conteudo deste. Dessa forma, ao tentar acessar o conteúdo de um endereço de memória inexistente, irá gerar um erro (não emitido, mas encerrando o programa sem a execução correta).
 
 ```
     printf(“Valor de p = %p\tValor de *p = %d”, p, *p);
