@@ -5,7 +5,7 @@ int x, y, *p;
 y = 0; // declarando y como 0
 p = &y;// declarando p como o endereço da variável y
 x = *p; // declarando x como o valor que está no endereço de p (o valor de y)
-x = 4; // declarando x como 4
+x = 4; // declarando x como 4, deixando o valor de y inalterado (0)
 
 (*p)++; // adicionando 1 ao valor de y (uma vez que p é o endereço de y)
 // dessa forma, o valor de y passa a ser 1
