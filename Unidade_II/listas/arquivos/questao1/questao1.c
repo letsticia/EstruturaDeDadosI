@@ -45,7 +45,7 @@ void calcula_media(FILE * entrada){
         exit(1);
     }
     
-    while(fscanf(entrada, " %s\t%f\t%f\t%f\n", aluno.nome, &aluno.nota1, &aluno.nota2, &aluno.nota3) != EOF){
+    while(fscanf(entrada, "%20[^\t]\t%f\t%f\t%f\n", aluno.nome, &aluno.nota1, &aluno.nota2, &aluno.nota3) != EOF){
         
         aluno.media = (aluno.nota1 + aluno.nota2 + aluno.nota3)/3;
         
