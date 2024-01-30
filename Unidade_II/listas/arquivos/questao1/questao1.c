@@ -10,10 +10,16 @@ typedef struct aluno {
 } Aluno;
 
 
-
 void adiciona_aluno(){
     Aluno aluno;
-    FILE * entrada = fopen("entrada_q3.txt", "a+");
+
+    FILE * entrada = fopen("entrada_q3.txt", "a");
+
+    if (entrada == NULL){
+        printf("Erro ao abrir o arquivo!\n");
+        exit(1);
+    }
+
     printf("Digite o nome do aluno: ");
     scanf("%s", aluno.nome);
     printf("Digite a primeira nota: ");
@@ -33,6 +39,11 @@ void calcula_media(FILE * entrada){
     
     Aluno aluno;
     FILE * saida = fopen("saida_q3.txt", "w");
+
+    if (entrada == NULL){
+        printf("Erro ao abrir o arquivo!\n");
+        exit(1);
+    }
     
     while(fscanf(entrada, "%s\t%f\t%f\t%f\n", aluno.nome, &aluno.nota1, &aluno.nota2, &aluno.nota3) != EOF){
         
@@ -56,7 +67,10 @@ int main(void){
 
     entrada = fopen("entrada_q3.txt", "a+");
 
-
+    if (entrada == NULL){
+        printf("Erro ao abrir o arquivo!\n");
+        exit(1);
+    }
 
     do{
         printf("====================================\n");
