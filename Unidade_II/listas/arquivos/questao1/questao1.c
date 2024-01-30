@@ -15,13 +15,13 @@ void adiciona_aluno(){
 
     FILE * entrada = fopen("entrada_q3.txt", "a");
 
-    if (entrada == NULL){
+    if (entrada == NULL){ 
         printf("Erro ao abrir o arquivo!\n");
         exit(1);
     }
 
     printf("Digite o nome do aluno: ");
-    scanf("%s", aluno.nome);
+    scanf(" %[^\n]s", aluno.nome);
     printf("Digite a primeira nota: ");
     scanf("%f", &aluno.nota1);
     printf("Digite a segunda nota: ");
@@ -45,7 +45,7 @@ void calcula_media(FILE * entrada){
         exit(1);
     }
     
-    while(fscanf(entrada, "%s\t%f\t%f\t%f\n", aluno.nome, &aluno.nota1, &aluno.nota2, &aluno.nota3) != EOF){
+    while(fscanf(entrada, " %s\t%f\t%f\t%f\n", aluno.nome, &aluno.nota1, &aluno.nota2, &aluno.nota3) != EOF){
         
         aluno.media = (aluno.nota1 + aluno.nota2 + aluno.nota3)/3;
         
