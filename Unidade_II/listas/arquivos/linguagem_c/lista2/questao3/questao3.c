@@ -32,8 +32,16 @@ int main(){
     printf("Digite a quantidade de frutas que deseja adicionar: ");
     scanf("%d", &quantidade);
 
-    for (int i = 0; i < quantidade; i++){
-        preenche_arquivo();
+    if (quantidade <= 0){
+        printf("Saindo do programa...\n");
+        exit(1);
+    } else{
+        for (int i = 0; i < quantidade; i++){
+            preenche_arquivo();
+        }
+        printf("Fim do cadastro de frutas! Saindo do programa...\n");
     }
+
+    
     return 0;
 }
