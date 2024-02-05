@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include "calculadora.h"
 
 float adicao(float primeiro_numero, float segundo_numero){
     return primeiro_numero + segundo_numero;
