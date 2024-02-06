@@ -10,3 +10,6 @@ void imprime(Aluno * estudante);
 
 /*Função que libera a memória, recebe um ponteiro de Aluno como parâmetro*/
 void libera(Aluno * estudante);
+
+/*Função que matricula alunos*/
+Aluno** matricula(int quantidade);

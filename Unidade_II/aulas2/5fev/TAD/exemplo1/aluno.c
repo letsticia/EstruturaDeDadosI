@@ -21,7 +21,7 @@ Aluno * recebe_dados(){
 
     // ->, porque estudante é um ponteiro
     printf("Informe o nome do aluno: ");
-    scanf("%[^\n]", estudante->nome); 
+    scanf(" %[^\n]", estudante->nome); 
     
     printf("Informe a matrícula do aluno: ");
     scanf("%d", &estudante->matricula);
@@ -33,14 +33,30 @@ Aluno * recebe_dados(){
 }
 
 void imprime(Aluno * estudante){
-    printf("=== Dados do Aluno ===\n");
     printf("Nome: %s\n", estudante->nome);
     printf("Matrícula: %d\n", estudante->matricula);
     printf("IRA: %.2f\n", estudante->IRA);
 }
 
 void libera(Aluno * estudante){
-    printf("Liberando memória...\n");
     free(estudante);
-    printf("Memória liberada!\n");
+}
+
+Aluno ** matricula(int quantidade){
+    Aluno ** estudantes = (Aluno **) malloc(quantidade * sizeof(Aluno *));
+
+    if (estudantes == NULL){
+        printf("Sem memória!\n");
+        exit(1);
+    }
+
+    for (int i = 0; i < quantidade; i++){
+        printf("====================================\n");
+        printf("Matriculando aluno %d...\n", i+1);
+        printf("====================================\n");
+        estudantes[i] = recebe_dados();
+        printf("Aluno %d matriculado!\n", i+1);
+    }
+    
+    return estudantes;
 }
