@@ -10,7 +10,7 @@ int main(){
     int contador;
     int contador2;
 
-    printf("digite a quantidade de alunos a serem matriculados: ");
+    printf("Digite a quantidade de alunos a serem matriculados: ");
     scanf("%d", &quantidade);
 
     Aluno ** estudantes = matricula(quantidade);

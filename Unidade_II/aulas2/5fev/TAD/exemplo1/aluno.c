@@ -43,6 +43,7 @@ void libera(Aluno * estudante){
 }
 
 Aluno ** matricula(int quantidade){
+    
     Aluno ** estudantes = (Aluno **) malloc(quantidade * sizeof(Aluno *));
 
     if (estudantes == NULL){
