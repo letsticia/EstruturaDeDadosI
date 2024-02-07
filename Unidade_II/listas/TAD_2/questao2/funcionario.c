@@ -45,9 +45,12 @@ int main(){
     }
 
     copia_dados(arquivo, n, pessoal);
+    
     imprime_folha_pagamento(n, pessoal, 'A');
     imprime_folha_pagamento(n, pessoal, 'B');
     imprime_folha_pagamento(n, pessoal, 'C');
+
     fclose(arquivo);
+
     return 0;
 }
