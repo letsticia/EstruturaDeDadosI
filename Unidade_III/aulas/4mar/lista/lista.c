@@ -30,7 +30,7 @@ Lista* insere_elemento(Lista* lista, int valor){
     return novo_no;
 }
 
-// imprime a lista
+
 void imprime_lista(Lista* lista){
     Lista * contador;
 
@@ -66,7 +66,6 @@ int busca_lista(Lista* lista, int valor){
     }
 }
 
-// retirar elemento da lista 
 Lista * retira_elemento(Lista* lista, int valor){
     Lista * anterior = NULL;
     Lista * atual = lista;
