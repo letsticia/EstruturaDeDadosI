@@ -85,6 +85,5 @@ Lista * retira_elemento(Lista* lista, int valor){
         anterior->prox_elemento = atual->prox_elemento;
     }
 
-    free(atual);
     return lista;
 }
