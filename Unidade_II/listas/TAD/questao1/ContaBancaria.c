@@ -1,66 +1,68 @@
 #include "ContaBancaria.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-typedef struct contaBancaria{
+struct ContaBancaria
+{
     char titular[50];
     int numero;
     float saldo;
-} ContaBancaria;
+};
 
-ContaBancaria* criaConta(void){
-    ContaBancaria* conta = (ContaBancaria*) malloc(sizeof(ContaBancaria));
+Conta * criaConta(char titular[50], int numero, float saldo){
 
-    if (conta == NULL){
-        printf("Sem memória!\n");
-        exit(1);
-    }
-    
-    printf("Informe o nome do titular da conta: ");
-    scanf(" %[^\n]", conta->titular);
+    Conta * conta = (Conta *) malloc(sizeof(Conta));
 
-    printf("Informe o número da conta: ");
-    scanf("%d", &conta->numero);
-
-    printf("Informe o saldo da conta: ");
-    scanf("%f", &conta->saldo);
+    strcpy(conta->titular, titular);
+    conta->numero = numero;
+    conta->saldo = saldo;
 
     return conta;
+
 }
 
-void deposita(ContaBancaria* conta, float valor){
-    conta->saldo += valor;
-    printf("Depósito realizado!\n");
+void exibeConta(Conta* conta){
+    printf("nome:\t %s\n", conta->titular);
+    printf("numero:\t %d\n", conta->numero);
+    printf("saldo:\t %.2f\n", conta->saldo);
 }
 
-void saca(ContaBancaria* conta, float valor){
-    
-    if (conta->saldo < valor){
-        printf("Saldo insuficiente!\n");
-    } else{
-        conta->saldo -= valor;
-        printf("Saque realizado!\n");
+void deposita (Conta * conta, float valor){
+    conta->saldo = conta->saldo + valor;
+}
+
+int verifica(Conta * conta, float valor){
+    if ((conta->saldo) < valor){
+        printf("saldo insuficiente\n");
+        return 0;
+    } else {
+        return 1;
     }
 }
 
-void transfere(ContaBancaria* origem, ContaBancaria* destino, float valor){
-    
-    if (origem->saldo < valor){
-        printf("Saldo insuficiente!\n");
-        
-    } else{
-        origem->saldo -= valor;
-        destino->saldo += valor;
-
-        printf("Transferência realizada!\n");
+void saca (Conta * conta, float valor){
+    if (verifica(conta, valor) == 1){
+        conta->saldo = conta->saldo - valor;
     }
 }
 
-void saldo(ContaBancaria* conta){
-    printf("Saldo: %.2f\n", conta->saldo);
+void transfere(Conta * origem, Conta * destino, float valor){
+
+    if (verifica(origem, valor) == 1){
+        saca(origem, valor);
+        deposita(destino, valor);
+
+        printf("Transferencia realizada\n");
+    }else{
+        printf("Transferencia nao realizada\n");
+    }
 }
 
-void excluiConta(ContaBancaria* conta){
+void saldo(Conta * conta){
+    printf("O saldo da conta é %.2f\n", conta->saldo);
+}
+
+void excluiConta(Conta * conta){
     free(conta);
-    printf("Conta excluída!\n");
 }

@@ -18,7 +18,7 @@ int ContaPrincipal(void){
     }
 }
 
-int OperacoesConta1(ContaBancaria * conta1, ContaBancaria * conta2, int opcao){
+int OperacoesConta1(Conta * conta1, Conta* conta2, int opcao){
     float valor = 0;
     
     switch (opcao){
@@ -53,7 +53,7 @@ int OperacoesConta1(ContaBancaria * conta1, ContaBancaria * conta2, int opcao){
         }
 }
 
-int OperacoesConta2(ContaBancaria * conta1, ContaBancaria* conta2, int opcao){
+int OperacoesConta2(Conta * conta1, Conta* conta2, int opcao){
     float valor = 0;
     
     switch (opcao){
@@ -89,11 +89,13 @@ int OperacoesConta2(ContaBancaria * conta1, ContaBancaria* conta2, int opcao){
 }
 
 int main(void){
-
+    Conta* conta1 = criaConta("Leticia", 123, 4000);
+    Conta* conta2 = criaConta("Maria", 321, 5000);
     printf("=========== Conta 1 ===========\n");
-    ContaBancaria* conta1 = criaConta();
+    exibeConta(conta1);
     printf("=========== Conta 2 ===========\n");
-    ContaBancaria* conta2 = criaConta();
+    exibeConta(conta2);
+    
 
     int opcao = -1;
 
