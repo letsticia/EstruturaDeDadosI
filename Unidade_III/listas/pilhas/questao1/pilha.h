@@ -15,5 +15,5 @@ int pilha_vazia(Pilha* pilha);
 // função que libera dinamicamente a pilha
 void pilha_libera(Pilha* pilha);
 
-// função que imprime a pilha
+// função que imprime os elementos da pilha
 void pilha_imprime(Pilha* pilha);

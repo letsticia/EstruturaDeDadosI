@@ -37,7 +37,7 @@ float pilha_pop(Pilha* pilha){
     float variavel;
 
     if (pilha_vazia(pilha)){
-        printf("Pilha vazian não há nada para retirar \n");
+        printf("Pilha vazia não há nada para retirar \n");
         exit(1);
     }
 
